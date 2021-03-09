@@ -99,8 +99,10 @@ return [
         'default_timeout'          => 360,
         'keep_releases'            => 5,
         'release_name'             => date('YmdHi'),
-        'composer_action'          => 'install',
-        'composer_options'         => '{{composer_action}} --verbose --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader',
+        'composer_action'          => 'update',
+        'composer_options'         => '{{composer_action}}',
+        'composer_actions'         => 'install',
+        'composer_option'          => '{{composer_action}} --verbose --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader',
         'bugsnag_api_key'          => config('bugsnag.api_key'),
         'bugsnag_app_version'      => config('bugsnag.app_version'),
         'ssh_multiplexing'         => true,
@@ -135,7 +137,7 @@ return [
         // production
         '135.181.187.134'  => [
             'stage'        => 'production',
-            'deploy_path'  => env('DEPLOYER_PATH', '/var/www'),
+            'deploy_path'  => env('DEPLOYER_PATH', '/var/www/deploy'),
             'user'         => env('DEPLOYER_USER', 'root'),
             'port'         => env('DEPLOYER_PORT', 22),
             'identityFile' => '~/.ssh/id_rsa',
