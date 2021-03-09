@@ -136,7 +136,7 @@ return [
         '135.181.187.134'  => [
             'stage'        => 'production',
             'deploy_path'  => env('DEPLOYER_PATH', '/var/www'),
-            'user'         => env('DEPLOYER_USER', 'ince_admin'),
+            'user'         => env('DEPLOYER_USER', 'root'),
             'port'         => env('DEPLOYER_PORT', 22),
             'identityFile' => '~/.ssh/id_rsa',
             'forwardAgent' => true,
