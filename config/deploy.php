@@ -58,9 +58,9 @@ return [
         'ready' => [
             'artisan:storage:link',
             'artisan:optimize',
-            'artisan:migrate',
-            'artisan:geoip:update',
-            'artisan:horizon:terminate',
+            //'artisan:migrate',
+            //'artisan:geoip:update',
+            //'artisan:horizon:terminate',
         ],
 
         // Deployment is done and live
