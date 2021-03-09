@@ -135,7 +135,7 @@ return [
 
     'hosts' => [
         // production
-        '135.181.187.134'  => [
+        '10.10.0.52'  => [
             'stage'        => 'production',
             'deploy_path'  => env('DEPLOYER_PATH', '/var/www/deploy'),
             'user'         => env('DEPLOYER_USER', 'root'),
