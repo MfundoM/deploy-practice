@@ -1,0 +1,58 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Models\Model;
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+
+class {{ class }} implements ShouldQueue
+{
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    /**
+     * The model.
+     *
+     * @var \App\Models\Model $model
+     */
+    protected $model;
+
+    /**
+     * Create a new job instance.
+     *
+     * @param \App\Models\Model $model
+     * @return void
+     */
+    public function __construct(Model $model)
+    {
+        $this->queue = 'default'; // <-- change this accordingly
+        $this->delay = 0;
+
+        $this->model = $model;
+    }
+
+    /**
+     * Execute the job.
+     *
+     * @return void
+     */
+    public function handle()
+    {
+        //
+    }
+
+    /**
+     * Get the tags that should be assigned to the job.
+     *
+     * @return array
+     */
+    public function tags()
+    {
+        return [
+            //
+        ];
+    }
+}
