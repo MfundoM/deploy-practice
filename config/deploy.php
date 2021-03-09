@@ -133,7 +133,7 @@ return [
 
     'hosts' => [
         // production
-        '10.10.3.62'  => [
+        '135.181.187.134'  => [
             'stage'        => 'production',
             'deploy_path'  => env('DEPLOYER_PATH', '/var/www'),
             'user'         => env('DEPLOYER_USER', 'ince_admin'),
